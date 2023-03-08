@@ -171,10 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1440, y: 3040}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 404123279}
   - component: {fileID: 404123281}
   - component: {fileID: 404123280}
+  - component: {fileID: 404123282}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -286,9 +287,9 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 40
     m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 50
+    m_BestFit: 1
+    m_MinSize: 40
+    m_MaxSize: 170
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -304,6 +305,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404123278}
   m_CullTransparentMesh: 1
+--- !u!114 &404123282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404123278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152759c08740c4101ac3b51c83ebfc46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843566751
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +685,7 @@ GameObject:
   - component: {fileID: 1512327884}
   - component: {fileID: 1512327886}
   - component: {fileID: 1512327885}
+  - component: {fileID: 1512327887}
   m_Layer: 5
   m_Name: BestScore
   m_TagString: Untagged
@@ -723,9 +737,9 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 40
     m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 50
+    m_BestFit: 1
+    m_MinSize: 40
+    m_MaxSize: 170
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -741,6 +755,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512327883}
   m_CullTransparentMesh: 1
+--- !u!114 &1512327887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512327883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e867d0ad5e52a44e1992d10c99709c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1605440339
 GameObject:
   m_ObjectHideFlags: 0
