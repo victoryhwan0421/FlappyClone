@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using UnityEngine.Animations;
 
 public class BirdJump : MonoBehaviour
 {
@@ -13,12 +15,13 @@ public class BirdJump : MonoBehaviour
     [SerializeField]
     float JumpPower = 0.0f;
 
-
- 
+    
+    public static bool isGameOver = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Debug.Log("is GameOver?:  " + isGameOver);
     }
 
     void Update()
@@ -41,13 +44,21 @@ public class BirdJump : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        isGameOver = true;
+        Debug.Log("is GameOver?:  " + isGameOver);
+
         // best score 기록 
         if (Score.score > Score.bestscore)
         {
             Score.bestscore = Score.score;
         }
+        Invoke("LoadGameOverScene", 0.3f);
 
-        // GameOverScene 실행 
+
+    }
+
+    private void LoadGameOverScene()
+    {
         SceneManager.LoadScene("GameOverScene");
     }
 }

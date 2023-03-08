@@ -6,6 +6,11 @@ public class ScoreUp : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Score.score += 1;
+
+        if(collision.gameObject.tag == "Bird" && BirdJump.isGameOver == false)
+        {
+            Score.score += 1;
+        }
+        
     }
 }
